@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace Open_Lab_04._07
 {
@@ -6,7 +7,15 @@ namespace Open_Lab_04._07
     {
         public string Reverse(string original)
         {
-            throw new NotImplementedException();
+            int count = original.Length;
+            char[] originalArr = original.ToCharArray();
+            string reverse = string.Empty;
+            for (int i = count - 1; i > -1; i--)
+            {
+                reverse = reverse + originalArr[i];
+            }
+            return reverse;
+
         }
     }
 }
